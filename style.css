@@ -1,0 +1,46 @@
+body {
+    text-align: center;
+    background-color: rgb(64, 64, 64);
+    color: #fff; /* Text color */
+    font-family: 'Arial', sans-serif; /* Change the font family to your preference */
+    line-height: 1.6; /* Improve readability with increased line height */
+    padding: 20px; /* Add some padding for content separation */
+}
+
+
+canvas {
+    background: rgb(203, 181, 193); /* Dark background color */
+    display: block;
+    margin: 0 auto;
+    border: 2px solid rgb(103, 246, 229);
+    width: 100%;
+    box-shadow: 0 0 10px rgba(204, 204, 23, 0.8); /* Shadow effect */
+}
+
+h1 {
+    font-size: 42px;
+    color:rgb(53, 141, 188);
+    font-family:monospace; /* Change the font-family to your preference */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+    animation: carousel 5s infinite; /* Example of a simple carousel animation */
+}
+
+@keyframes carousel {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
