@@ -1,15 +1,16 @@
 body {
     text-align: center;
-    background-color: rgb(64, 64, 64);
+    background:linear-gradient(to right, rgb(229, 155, 201), rgb(71, 8, 51));
     color: #fff; /* Text color */
     font-family: 'Arial', sans-serif; /* Change the font family to your preference */
     line-height: 1.6; /* Improve readability with increased line height */
     padding: 20px; /* Add some padding for content separation */
+
 }
 
 
 canvas {
-    background: rgb(203, 181, 193); /* Dark background color */
+    background:linear-gradient(to right, rgb(8, 60, 99), rgb(147, 71, 217));
     display: block;
     margin: 0 auto;
     border: 2px solid rgb(103, 246, 229);
@@ -19,39 +20,30 @@ canvas {
 
 h1 {
     font-size: 42px;
-    color:rgb(53, 141, 188);
+    color:rgb(5, 10, 110);
     font-family:monospace; /* Change the font-family to your preference */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+    text-shadow: 2px 2px 4px rgba(11, 8, 8, 0.5); /* Add a shadow effect */
     animation: carousel 5s infinite; /* Example of a simple carousel animation */
+    border: 2px solid rgb(0, 10, 19); /* Add border */
+    padding: 10px; /* Add padding for space around the text */
+    display: inline-block; /* Make the border and padding apply without affecting layout */
+    position: relative; /* Position for absolute positioned letters */
+}
+h1 span {
+    display: inline-block;
+    position: absolute;
+    opacity: 0;
+    animation: float 5s infinite alternate;
 }
 
-@keyframes carousel {
+/* Keyframes for the floating animation */
+@keyframes float {
     0% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    75% {
-        opacity: 1;
+        transform: translateY(0);
+        opacity: 0.7;
     }
     100% {
-        opacity: 0;
+        transform: translateY(-20px);
+        opacity: 0.2;
     }
 }
-@media only screen and (max-width: 600px) {
-    body {
-        padding: 10px; /* Adjust padding for better spacing on smaller screens */
-    }
-
-    h1 {
-        font-size: 24px; /* Adjust font size for h1 on smaller screens */
-    }
-
-    /* Add more styles for other elements as needed */
-}
-
-
