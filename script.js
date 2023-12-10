@@ -166,6 +166,7 @@ function draw(){
     collisionDetection();
     drawScore();
     drawLives();
+    drawShortcuts();
 
     // Draw Start button and volume icon if the game is not started yet
     if (!pressedStart){
@@ -602,19 +603,54 @@ function playPaddleHit() {
 
 function drawScore() {
     ctx.beginPath();
-    ctx.font = "26px Arial";
+    ctx.font = 'bold 20px Arial';
     ctx.fillStyle = textColor;
     ctx.textAlign = "start";
     ctx.fillText("Score: " + score, 8, 30);
+
 }
 
 function drawLives() {
     ctx.beginPath();
-    ctx.font = "26px Arial";
+    ctx.font = 'bold 20px Arial';
     ctx.fillStyle = textColor;
     ctx.textAlign = "start";
     ctx.fillText("Lives: " + lives, 8, 60);
 }
+function drawShortcuts() {
+    // Set the font style for the text
+    ctx.font = "16px Arial";
+
+    // Set the fill style for the text (color)
+    ctx.fillStyle = textColor;
+
+    // Set the text alignment to "start" (you might want to use "left" instead)
+    ctx.textAlign = "start";
+
+    // Calculate the width and height of the box based on the text content
+    const boxWidth = ctx.measureText("Press 3 for fast").width + 70;
+    const boxHeight = 110;
+
+    // Calculate the coordinates for the box
+    const boxX = 20;
+    const boxY = 100;
+
+    // Draw the box
+    ctx.beginPath();
+    ctx.rect(boxX, boxY, boxWidth, boxHeight);
+    ctx.fillStyle = "white";
+    ctx.fill();
+
+    // Draw the text inside the box
+    ctx.fillStyle = textColor;
+    ctx.fillText("Shortcuts:", boxX + 10, boxY + 20);
+    ctx.fillText("Press P to pause/play", boxX + 20, boxY + 40);
+    ctx.fillText("Press 1 for slow", boxX + 20, boxY + 60);
+    ctx.fillText("Press 2 for medium", boxX + 20, boxY + 80);
+    ctx.fillText("Press 3 for fast", boxX + 20, boxY + 100);
+}
+
+
 
 function drawVolume(){
     sfxImg = new Image();
