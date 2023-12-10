@@ -643,6 +643,7 @@ function drawShortcuts() {
 
     // Draw the text inside the box
     ctx.fillStyle = textColor;
+    ctx.font = 'bold 14px Arial';
     ctx.fillText("Shortcuts:", boxX + 10, boxY + 20);
     ctx.fillText("Press P to pause/play", boxX + 20, boxY + 40);
     ctx.fillText("Press 1 for slow", boxX + 20, boxY + 60);
